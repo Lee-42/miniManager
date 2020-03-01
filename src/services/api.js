@@ -116,3 +116,46 @@ export async function delTag(params) {
     body: params,
   });
 }
+
+
+
+
+// 项目
+export async function queryProject(params) {
+  return request(`/api/getProjectList?${stringify(params)}`);
+}
+
+export async function addProject(params) {
+  return request('/api/addProject', {
+    method: 'POST',
+    body: params,
+  })
+}
+
+
+
+//留言
+export async function addReplyMessage(params){
+  return request('/api/addReplyMessage', {
+    method: 'POST',
+    body: params,
+  })
+}
+
+export async function queryMessage(params){
+  return request(`/api/getMessageList?${stringify(params)}`);
+}
+
+export async function delMessage(params){
+  return request('/api/delMessage', {
+    method: 'POST',
+    body: params,
+  })
+}
+
+export async function getMessageDetail(params){
+  return request('/api/getMessageDetail', {
+    method: 'POST',
+    body: params,
+  })
+}
